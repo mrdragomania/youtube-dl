@@ -1,0 +1,29 @@
+form button {
+	border: 0 !important;
+	background: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
+
+	-webkit-animation: AnimationName 5000ms ease infinite;
+	-moz-animation: AnimationName 5000ms ease infinite;
+	animation: AnimationName 5000ms ease infinite;
+}
+form button:hover {
+	border: 0 !important;
+}
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
