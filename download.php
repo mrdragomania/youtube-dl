@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-define('PATH', './converted-files/');
-
 $type = $_GET['type'];
 switch ($type) {
 	case 'all':
@@ -16,8 +14,7 @@ switch ($type) {
 			header("Content-Transfer-Encoding: binary/octet-stream");
 			header("Content-Type: application/x-download");
 			header("Content-Disposition: attachment; filename=" . $mp3Single);
-			readfile(PATH . $mp3Single);
-			unset($_SESSION['files'][$index]);
+			readfile($mp3Single);
 			header("Location: download.php?type=all");
 		}
 		session_destroy();
@@ -30,7 +27,7 @@ switch ($type) {
 			header("Content-Transfer-Encoding: binary/octet-stream");
 			header("Content-Type: application/x-download");
 			header("Content-Disposition: attachment; filename=" . $filename);
-			readfile(PATH . $filename);
+			readfile($filename);
 		}
 		break;
 	default:

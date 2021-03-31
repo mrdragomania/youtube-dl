@@ -63,6 +63,8 @@
 			        url: $(form.target).attr('action'),
 			        data: {url: e}
 			    }).done(function(data) {
+			    	console.log(data);
+			    	
 			    	data = JSON.parse(data);
 			    	if(data['header']['status_code'] === 200) {
 			    		element = $('#converted-files-container');

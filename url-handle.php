@@ -1,4 +1,7 @@
 <?php
+if(session_status() === 2) {
+	session_destroy();
+}
 session_start();
 
 define('PATH', './converted-files/');
@@ -39,7 +42,7 @@ try {
 $mp3Array = glob("*.mp3");
 
 foreach($mp3Array as $mp3SingleRow) {
-	rename($mp3SingleRow, './converted-files/' . $mp3SingleRow);
+	// rename($mp3SingleRow, './converted-files/' . $mp3SingleRow);
 	array_push($_SESSION['files'], $mp3SingleRow);
 }
 
